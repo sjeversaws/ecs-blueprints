@@ -40,7 +40,7 @@ jobs:
           key: ${{ github.sha }}
           path: .cache
       - name: Build site
-        run: mkdocs build --config-file ./pages/mkdocs.yml --site-dir ./_site
+        run: mkdocs build --config-file ./pages/mkdocs.yml --site-dir ../_site
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
 
