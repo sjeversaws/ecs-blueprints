@@ -1,7 +1,7 @@
 site_name: "ECS Blueprints"
 site_author: "AWS"
-site_url: "https://sjeversaws.github.io/ecs-blueprints/pages/"
-repo_name: "ecs-blueprints"
+site_url: "https://sjeversaws.github.io/ecs-blueprints/"
+repo_name: "ECS Blueprints"
 repo_url: "https://github.com/sjeversaws/ecs-blueprints"
 docs_dir: "pages"
 copyright: "Copyright © Amazon 2023"
@@ -50,5 +50,3 @@ markdown_extensions:
       permalink: true
 plugins:
   - search
-copyright: |
-  &copy; Amazon 2023
