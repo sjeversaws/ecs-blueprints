@@ -39,6 +39,7 @@ theme:
       accent: lime  
 nav:
   - Introduction: index.md
+  - Core Infrastructure: core-infra/index.md
 markdown_extensions:
   - admonition
   - codehilite
