@@ -1,5 +1,7 @@
 # Core Infrastructure
+
 The core-infra is the Terraform code used to deploy the core infrastructure for an ECS Fargate workload. The AWS resources created by the script are:
+
 * Networking
   * VPC
     * 3 public subnets, 1 per AZ. If a region has less than 3 AZs it will create same number of public subnets as AZs.
@@ -33,6 +35,7 @@ terraform init
 terraform plan
 terraform apply --auto-approve
 ```
+
 ## Output
 
 After executing the Terraform code, you will receive an output containing a series of IDs and values as shown [below](#outputs). These outputs are essential inputs for subsequent Terraform blueprints. To use this infrastructure for other example blueprints, all you need is the `cluster_name`.
