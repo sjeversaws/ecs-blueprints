@@ -13,31 +13,36 @@ The core-infra is the Terraform code used to deploy the core infrastructure for 
 * CloudMap service discovery namespace `default`
 
 ## Getting Started
+
 Make sure you have all the [prerequisites](../../README.md) on your machine.
 
 ## Usage
+
 1. Clone the forked repository from your account (not the one from the aws-ia organization) and change the directory to the appropriate one as shown below:
 ```bash
 cd ecs-blueprints/terraform/fargate-examples/core-infra/
 ```
+
 2. Run Terraform init to download the providers and install the modules
 ```shell
 terraform init
 ```
+
 3. Review the terraform plan output, take a look at the changes that terraform will execute, and then apply them:
 ```shell
 terraform plan
 terraform apply --auto-approve
 ```
 ## Output
+
 After executing the Terraform code, you will receive an output containing a series of IDs and values as shown [below](#outputs). These outputs are essential inputs for subsequent Terraform blueprints. To use this infrastructure for other example blueprints, all you need is the `cluster_name`.
 
 ## Cleanup
+
 When you're ready, run the following command to delete the core infrastructure. If you have provisioned resources using other blueprints that use the infrastructure created here, then destroy those blueprint resources first.
 ```shell
 terraform destroy
 ```
-
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements
