@@ -12,21 +12,21 @@ This solution blueprint focuses on how to build multi-architecture images, store
 aws secretsmanager create-secret --name ecs-github-token --secret-string <your-github-access-token>
 ```
 
-- **NOTE:** Codestar notification rules require a **one-time** creation of a service-linked role. Please verify one exists or create the codestar-notification service-linked role.
+> [!NOTE] Codestar notification rules require a **one-time** creation of a service-linked role. Please verify one exists or create the codestar-notification service-linked role.
 
 ```shell
 aws iam get-role --role-name AWSServiceRoleForCodeStarNotifications
 ```
 
-> [IMPORTANT!]
+> [!IMPORTANT]
 > If you receive the following error...
-
+> 
 > ```shell
 > An error occurred (NoSuchEntity) when calling the GetRole operation: The role with name > AWSServiceRoleForCodeStarNotifications cannot be found.
 > ```
-
+> 
 > ... then create the service-linked role with the `aws cli` as show here:
-
+> 
 > ```shell
 > aws iam create-service-linked-role --aws-service-name codestar-notifications.amazonaws.com
 > ```

@@ -4,7 +4,7 @@ This solution blueprint creates a backend service that **does not** sit behind a
 
 ## Deploy the Core Infrastructure
 
-> [IMPORTANT!]
+> [!IMPORTANT]
 > Note if you have already deployed the infra then you can reuse it.
 
 Deploy the [core-infrastructure](core-infra.md).
