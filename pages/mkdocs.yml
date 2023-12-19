@@ -6,37 +6,56 @@ repo_url: "https://github.com/sjeversaws/ecs-blueprints"
 docs_dir: "."
 copyright: "Copyright © Amazon 2023"
 theme:
+  name: material
   logo: images/aws-logo.png
   favicon: images/aws-favicon.png
-  name: material
   font:
     text: ember
+  palette:
+    primary: orange
+    accent: orange
   icon:
     repo: fontawesome/brands/github
+    admonition:
+      note: octicons/tag-16
+      abstract: octicons/checklist-16
+      info: octicons/info-16
+      tip: octicons/squirrel-16
+      success: octicons/check-16
+      question: octicons/question-16
+      warning: octicons/alert-16
+      failure: octicons/x-circle-16
+      danger: octicons/zap-16
+      bug: octicons/bug-16
+      example: octicons/beaker-16
+      quote: octicons/quote-16
   features:
     - navigation.tabs.sticky
-    - navigation.sections
-    - toc.integrate
-    - navigation.top
-    - search.suggest
-    - search.highlight
-    - content.tabs.link
-    - content.code.annotation
-    - content.code.copy
-  language: en
-  palette:
-    - scheme: default
-      toggle:
-        icon: material/toggle-switch-off-outline 
-        name: Switch to dark mode
-      primary: teal
-      accent: purple 
-    - scheme: slate 
-      toggle:
-        icon: material/toggle-switch
-        name: Switch to light mode    
-      primary: teal
-      accent: lime  
+  highlightjs: true
+  hljs_languages:
+    - yaml
+    - json
+markdown_extensions:
+  - admonition
+  - codehilite
+  - footnotes
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - toc:
+      permalink: true
+plugins:
+  - include-markdown
+  - search:
+      lang:
+        - en
+  - awesome-pages
 nav:
   - Introduction: index.md
   - Fargate Examples:
@@ -47,14 +66,3 @@ nav:
     - Prometheus: fargate-examples/prometheus.md
     - Queue Processing: fargate-examples/queue-processing.md
     - VPC Endpoints: fargate-examples/vpc-endpoints.md
-markdown_extensions:
-  - admonition
-  - codehilite
-  - footnotes
-  - pymdownx.critic
-  - toc:
-      permalink: "¤"
-  - toc:
-      permalink: true
-plugins:
-  - search
