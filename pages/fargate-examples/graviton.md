@@ -18,19 +18,18 @@ aws secretsmanager create-secret --name ecs-github-token --secret-string <your-g
 aws iam get-role --role-name AWSServiceRoleForCodeStarNotifications
 ```
 
-<div class="callout callout-info" markdown="span">
-If you receive the following error...
+> [IMPORTANT!]
+> If you receive the following error...
 
-```shell
-An error occurred (NoSuchEntity) when calling the GetRole operation: The role with name AWSServiceRoleForCodeStarNotifications cannot be found.
-```
+> ```shell
+> An error occurred (NoSuchEntity) when calling the GetRole operation: The role with name > AWSServiceRoleForCodeStarNotifications cannot be found.
+> ```
 
-... then create the service-linked role with the `aws cli` as show here:
+> ... then create the service-linked role with the `aws cli` as show here:
 
-```shell
-aws iam create-service-linked-role --aws-service-name codestar-notifications.amazonaws.com
-```
-</div>
+> ```shell
+> aws iam create-service-linked-role --aws-service-name codestar-notifications.amazonaws.com
+> ```
 
 - Again, once this is created, you will not have to complete these steps for the other examples.  
 

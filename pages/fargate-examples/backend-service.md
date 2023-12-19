@@ -3,9 +3,9 @@
 This solution blueprint creates a backend service that **does not** sit behind a load balancer. The backend service has a service discovery name registered with AWS Cloud Map. Other services running in this cluster can access the backend service using the service discovery name. Below are steps for deploying this service:
 
 ## Deploy the Core Infrastructure
-<div class="callout callout-info" markdown="span">
-Note if you have already deployed the infra then you can reuse it.
-</div>
+
+> [IMPORTANT!]
+> Note if you have already deployed the infra then you can reuse it.
 
 Deploy the [core-infrastructure](core-infra.md).
 
@@ -13,7 +13,7 @@ Deploy the [core-infrastructure](core-infra.md).
 
 1. Navigate to the blueprint folder:
 
-```bash
+```shell
 cd ecs-blueprints/terraform/fargate-examples/backend-service/
 ```
 
