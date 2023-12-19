@@ -8,33 +8,18 @@ This solution blueprint focuses on how to build multi-architecture images, store
 - Create a [Github token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) to access the forked repository.
 - Store the secret in AWS Secrets Manager in the region where you want to deploy the blueprints.
 
-```shell
-aws secretsmanager create-secret --name ecs-github-token --secret-string <your-github-access-token>
-```
-
-{% note %}
-**Note:** This is a note.
-{% endnote %}
+`aws secretsmanager create-secret --name ecs-github-token --secret-string <your-github-access-token>`
 
 {% include note.html content="Codestar notification rules require a **one-time** creation of a service-linked role. Please verify one exists or create the codestar-notification service-linked role.<br/><br/>`aws iam get-role --role-name AWSServiceRoleForCodeStarNotifications`" %}
 
 
-{{site.data.alerts.important}}
 If you receive the following error...
-<br/>
 
-<pre>
-An error occurred (NoSuchEntity) when calling the GetRole operation: The role with name > AWSServiceRoleForCodeStarNotifications cannot be found.
-</pre>
-<br/>
+`An error occurred (NoSuchEntity) when calling the GetRole operation: The role with name > AWSServiceRoleForCodeStarNotifications cannot be found.`
 
 ... then create the service-linked role with the `aws cli` as show here:
-<br/>
 
-<pre>
-aws iam create-service-linked-role --aws-service-name codestar-notifications.amazonaws.com
-</pre>
-{{site.data.alerts.end}}
+`aws iam create-service-linked-role --aws-service-name codestar-notifications.amazonaws.com`
 
 - Again, once this is created, you will not have to complete these steps for the other examples.  
 
