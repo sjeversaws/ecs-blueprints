@@ -1,4 +1,4 @@
-site_name: "ECS Blueprints"
+site_name: "Amazon ECS Blueprints"
 site_author: "AWS"
 site_url: "https://sjeversaws.github.io/ecs-blueprints/"
 repo_name: "ECS Blueprints"
@@ -7,7 +7,7 @@ docs_dir: "."
 copyright: "Copyright © Amazon 2023"
 theme:
   name: material
-  logo: images/aws-logo.png
+  logo: images/aws-logo-white.png
   favicon: images/aws-favicon.png
   font:
     text: ember
