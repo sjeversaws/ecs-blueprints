@@ -7,8 +7,8 @@ docs_dir: "."
 copyright: "Copyright © Amazon 2023"
 theme:
   name: material
-  logo: images/aws-logo-white.png
-  favicon: images/aws-favicon.png
+  logo: assets/images/aws-logo-white.png
+  favicon: assets/images/aws-favicon.png
   font:
     text: ember
   palette:
