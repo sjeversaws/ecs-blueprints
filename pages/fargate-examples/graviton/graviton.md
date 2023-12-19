@@ -11,9 +11,9 @@ This solution blueprint focuses on how to build multi-architecture images, store
 
 Deploy the [core-infrastructure](../core-infra/core-infra.md).
 
-## Configure Secrets
+## Deploy the Blueprint
 
-Create a [Github token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) to access the forked repository.
+- Create a [Github token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) to access the forked repository.
 
 - Store the secret in AWS Secrets Manager in the region where you want to deploy the blueprints.
 
@@ -21,16 +21,15 @@ Create a [Github token](https://docs.github.com/en/authentication/keeping-your-a
 aws secretsmanager create-secret --name ecs-github-token --secret-string <your-github-access-token>
 ```
 
-> [!NOTE]
-> Codestar notification rules require a **one-time** creation of a service-linked role. Please verify one exists or create the codestar-notification service-linked role.
-> 
-> ```shell
-> aws iam get-role --role-name AWSServiceRoleForCodeStarNotifications
-> ```
+- Verify the service-linked role exists:
 
+Codestar notification rules require a **one-time** creation of a service-linked role. Please verify one exists or create the codestar-notification service-linked role.
+
+```shell
+ aws iam get-role --role-name AWSServiceRoleForCodeStarNotifications
+```
 
 If you receive the following error:
-
 ```shell
 An error occurred (NoSuchEntity) when calling the GetRole operation: The role with name > AWSServiceRoleForCodeStarNotifications cannot be found.
 ```
@@ -41,23 +40,20 @@ An error occurred (NoSuchEntity) when calling the GetRole operation: The role wi
 aws iam create-service-linked-role --aws-service-name codestar-notifications.amazonaws.com
 ```
 
-Again, once this is created, you will not have to complete these steps for the other examples.
+Once this is created, you will not have to complete these steps for the other examples.
 
-## Deploy the Blueprint
-
-1. Navigate to the blueprint folder:
+- Navigate to the blueprint folder:
 
 ```shell
 cd ecs-blueprints/terraform/fargate-examples/graviton/
 ```
 
-2. Run the following:
+- Run the following:
 
 ```shell
 terraform init
 terraform plan
 terraform apply
-# type repository owner name and "yes"
 ```
 
 ## Solution Architecture

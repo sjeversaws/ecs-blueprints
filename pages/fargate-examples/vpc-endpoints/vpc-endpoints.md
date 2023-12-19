@@ -20,13 +20,13 @@ Deploy the [core-infrastructure](../core-infra/core-infra.md).
 > If you would like to disable the NAT Gateway, change `enable_nat_gw = false` in `core-infra` [variables.tf](../../../terraform/fargate-examples/core-infra/variables.tf). Please ensure that this solution blueprint deploys successfully prior to disabling the NAT Gateway in `core-infra`.
   
 
-1. Navigate to the blueprint folder:
+- Navigate to the blueprint folder:
 
 ```shell
 cd ecs-blueprints/terraform/fargate-examples/vpc-endpoints/
 ```
 
-2. Run the following:
+- Run the following:
 
 ```shell
 terraform init

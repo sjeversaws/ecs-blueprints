@@ -11,13 +11,13 @@ Deploy the [core-infrastructure](../core-infra/core-infra.md).
 
 ## Deploy the Blueprint
 
-1. Navigate to the blueprint folder:
+- Navigate to the blueprint folder:
 
 ```shell
 cd ecs-blueprints/terraform/fargate-examples/lb-service/
 ```
 
-2. Run the following:
+- Run the following:
 
 ```shell
 terraform init

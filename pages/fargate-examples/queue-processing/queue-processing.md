@@ -13,35 +13,34 @@ Deploy the [core-infrastructure](../core-infra/core-infra.md).
 
 ## Deploy the Blueprint
 
-1. Navigate to the blueprint folder:
+- Navigate to the blueprint folder:
 
 ```shell
 cd ecs-blueprints/terraform/fargate-examples/queue-processing/
 ```
 
-2. Verify the service-linked role exists:
+- Verify the service-linked role exists:
 
-Codestar notification rules require a **one-time** creation of a service-linked role. Please verify one exists or create the codestar-notification service-linked role:
-
-```shell
-aws iam get-role --role-name AWSServiceRoleForCodeStarNotifications
-```
-
-If you get the following error message: 
+Codestar notification rules require a **one-time** creation of a service-linked role. Please verify one exists or create the codestar-notification service-linked role.
 
 ```shell
-An error occurred (NoSuchEntity) when calling the GetRole operation: The role with name AWSServiceRoleForCodeStarNotifications cannot be found.
+ aws iam get-role --role-name AWSServiceRoleForCodeStarNotifications
 ```
 
-... please create the service-linked role with the `aws cli` below:
+If you receive the following error:
+```shell
+An error occurred (NoSuchEntity) when calling the GetRole operation: The role with name > AWSServiceRoleForCodeStarNotifications cannot be found.
+```
+
+... then you need to create the service-linked role with the `aws cli` as show here:
 
 ```shell
 aws iam create-service-linked-role --aws-service-name codestar-notifications.amazonaws.com
 ```
 
-Again, once this is created, you will not have to complete these steps for the other examples.
+Once this is created, you will not have to complete these steps for the other examples.
 
-3. Run the following:
+- Run the following:
 
 ```shell
 terraform init

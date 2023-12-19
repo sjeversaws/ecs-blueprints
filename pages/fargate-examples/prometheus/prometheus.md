@@ -17,17 +17,17 @@ Deploy the [core-infrastructure](../core-infra/core-infra.md).
 
 ## Deploy the Blueprint
 
-1. From the previously created AMP workspace, copy the remote-write endpoint. It will have this form, `https://aps-workspaces.<region>.amazonaws.com/workspaces/<workspace-id>/api/v1/remote_write`.
+- From the previously created AMP workspace, copy the remote-write endpoint. It will have this form, `https://aps-workspaces.<region>.amazonaws.com/workspaces/<workspace-id>/api/v1/remote_write`.
 
-2. Navigate to the blueprint folder:
+- Navigate to the blueprint folder:
 
 ```shell
 cd ecs-blueprints/terraform/fargate-examples/prometheus/
 ```
 
-3. Open the `ecs-adot-config.yaml` in this folder, and change the `AMP_REMOTE_WRITE_ENDPOINT` with above URL and change the REGION to region of AMP workspace.
+- Open the `ecs-adot-config.yaml` in this folder, and change the `AMP_REMOTE_WRITE_ENDPOINT` with above URL and change the REGION to region of AMP workspace.
 
-4. Run the following:
+- Run the following:
 
 ```shell
 terraform init

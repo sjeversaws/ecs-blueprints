@@ -20,18 +20,18 @@ Make sure you have all the [prerequisites](../../index.md) on your machine.
 
 ## Deploy the Blueprint
 
-1. Clone the forked repository from your account (not the one from the aws-ia organization) and change the directory to the appropriate one as shown below:
+- Clone the forked repository from your account (not the one from the aws-ia organization) and change the directory to the appropriate one as shown below:
 
 ```shell
 cd ecs-blueprints/terraform/fargate-examples/core-infra/
 ```
 
-2. Run Terraform init to download the providers and install the modules
+- Run Terraform init to download the providers and install the modules
 ```shell
 terraform init
 ```
 
-3. Review the terraform plan output, take a look at the changes that terraform will execute, and then apply them:
+- Review the terraform plan output, take a look at the changes that terraform will execute, and then apply them:
 ```shell
 terraform plan
 terraform apply --auto-approve
