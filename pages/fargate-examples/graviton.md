@@ -1,25 +1,41 @@
-# Graviton and Multi-architecture Container Images
+# Graviton and Multi-Architecture Container Images
 
 AWS Graviton processors are custom built by Amazon Web Services using 64-bit Arm Neoverse cores to deliver the best price performance for your cloud workloads. AWS Fargate supports Gravtion enabling containerized workloads to benefit from Graviton lower price with better performance.
 
 This solution blueprint focuses on how to build multi-architecture images, store them in ECR, and most importantly launch tasks on both Fargate x86 and ARM without juggling architecture specific container images.
 
-* Deploy the [core-infra](../core-infra/README.md). Note if you have already deployed the infra then you can reuse it as well.
-* Create a [Github token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) to access the forked repository.
-* Store the secret in AWS Secrets Manager in the region where you want to deploy the blueprints.
+- Deploy the [core-infra](../core-infra/README.md). Note if you have already deployed the infra then you can reuse it as well.
+- Create a [Github token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) to access the forked repository.
+- Store the secret in AWS Secrets Manager in the region where you want to deploy the blueprints.
 
 ```shell
 aws secretsmanager create-secret --name ecs-github-token --secret-string <your-github-access-token>
 ```
 
-* **NOTE:** Codestar notification rules require a **one-time** creation of a service-linked role. Please verify one exists or create the codestar-notification service-linked role.
-  * `aws iam get-role --role-name AWSServiceRoleForCodeStarNotifications`
+- **NOTE:** Codestar notification rules require a **one-time** creation of a service-linked role. Please verify one exists or create the codestar-notification service-linked role.
 
-    ```An error occurred (NoSuchEntity) when calling the GetRole operation: The role with name AWSServiceRoleForCodeStarNotifications cannot be found.```
-  *  If you receive the error above, please create the service-linked role with the `aws cli` below.
-  * `aws iam create-service-linked-role --aws-service-name codestar-notifications.amazonaws.com`
-  * Again, once this is created, you will not have to complete these steps for the other examples.  
-* Now you can deploy this blueprint
+```shell
+aws iam get-role --role-name AWSServiceRoleForCodeStarNotifications
+```
+
+<div class="callout callout-info" markdown="span">
+If you receive the following error...
+
+```shell
+An error occurred (NoSuchEntity) when calling the GetRole operation: The role with name AWSServiceRoleForCodeStarNotifications cannot be found.
+```
+
+... then create the service-linked role with the `aws cli` as show here:
+
+```shell
+aws iam create-service-linked-role --aws-service-name codestar-notifications.amazonaws.com
+```
+</div>
+
+- Again, once this is created, you will not have to complete these steps for the other examples.  
+
+## Deploy the Blueprint
+
 ```shell
 terraform init
 terraform plan

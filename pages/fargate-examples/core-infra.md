@@ -18,7 +18,7 @@ The core-infra is the Terraform code used to deploy the core infrastructure for 
 
 Make sure you have all the [prerequisites](../../README.md) on your machine.
 
-## Usage
+## Deploy the Blueprint
 
 1. Clone the forked repository from your account (not the one from the aws-ia organization) and change the directory to the appropriate one as shown below:
 ```bash
