@@ -16,7 +16,7 @@ The core-infra is the Terraform code used to deploy the core infrastructure for 
 
 ## Getting Started
 
-Make sure you have all the [prerequisites](../../index.md) on your machine.
+Make sure you have all the [prerequisites](../../../README.md) on your machine.
 
 ## Deploy the Blueprint
 
