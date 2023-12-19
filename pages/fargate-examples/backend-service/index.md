@@ -27,7 +27,7 @@ terraform apply -auto-approve
 
 ## Test the Solution
 
-To test the backend service access using service discovery, deploy the [load balanced service](lb-service.md) along with providing the name of this backend service.
+To test the backend service access using service discovery, deploy the [load balanced service](../lb-service/index.md) along with providing the name of this backend service.
 
 ## Solution Architecture
 
@@ -38,7 +38,7 @@ To test the backend service access using service discovery, deploy the [load bal
 The solution has following key components:
 
 - Service discovery using AWS Cloud Map: The backend service can be given a service discovery name such as `backend.default.cluster-name.local`. The `backend` is service name, and `default` is the namespace alongwith further qualifier of `cluster-name.local`. Other services can interact with the backend service using the service discovery name. Here are the key aspects to note:
-    - The namespace (i.e. `default.cluster-name.local`) is created in the [core-infra](../core-infra/README.md) blueprint. Many services can be registered to a namespace that is why we don't create the namespace in a specific service definition. We created them in the core-infra blueprint and you can easily add more namespaces there
+    - The namespace (i.e. `default.cluster-name.local`) is created in the [core-infra](../core-infra/index.md) blueprint. Many services can be registered to a namespace that is why we don't create the namespace in a specific service definition. We created them in the core-infra blueprint and you can easily add more namespaces there
     - We use `aws_service_discovery_dns_namespace` datasource to search and fetch the namespace.
     - The `aws_service_discovery_service` resource is used to register the service to the namespace. You see the record type, TTL, and health check setting in this resource.
 - ECR registery for the container image. We are using only one container image for the task in this example.
