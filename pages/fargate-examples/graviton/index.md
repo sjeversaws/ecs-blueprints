@@ -9,7 +9,7 @@ This solution blueprint focuses on how to build multi-architecture images, store
 > [!IMPORTANT]
 > If you have already deployed the infra then you can skip this step.
 
-Deploy the [core-infrastructure](../core-infra/core-infra.md).
+Deploy the [core-infrastructure](../core-infra/index.md).
 
 ## Deploy the Blueprint
 

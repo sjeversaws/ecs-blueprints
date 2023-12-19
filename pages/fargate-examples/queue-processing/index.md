@@ -9,7 +9,7 @@ This blueprint expects files uploaded to an S3 source bucket which trigger S3 ev
 > [!IMPORTANT]
 > If you have already deployed the infra then you can skip this step.
 
-Deploy the [core-infrastructure](../core-infra/core-infra.md).
+Deploy the [core-infrastructure](../core-infra/index.md).
 
 ## Deploy the Blueprint
 

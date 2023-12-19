@@ -59,14 +59,14 @@ plugins:
 nav:
   - Introduction: index.md
   - Fargate Examples:
-    - Core Infrastructure: fargate-examples/core-infra.md
-    - Backend Service: fargate-examples/backend-service/backend-service.md
-    - Load Balanced Service: fargate-examples/lb-service/lb-service.md
-    - Graviton: fargate-examples/graviton/graviton.md
-    - Prometheus: fargate-examples/prometheus/prometheus.md
-    - Queue Processing: fargate-examples/queue-processing/queue-processing.md
-    - VPC Endpoints: fargate-examples/vpc-endpoints/vpc-endpoints.md
+    - Core Infrastructure: fargate-examples/core-infra/index.md
+    - Backend Service: fargate-examples/backend-service/index.md
+    - Load Balanced Service: fargate-examples/lb-service/index.md
+    - Graviton: fargate-examples/graviton/index.md
+    - Prometheus: fargate-examples/prometheus/index.md
+    - Queue Processing: fargate-examples/queue-processing/index.md
+    - VPC Endpoints: fargate-examples/vpc-endpoints/index.md
   - EC2 Examples:
-    - Core Infrastructure: ec2-examples/core-infra/core-infra.md
-    - Backend Service: ec2-examples/backend-service/backend-service.md
-    - Load Balanced Service: ec2-examples/lb-service/lb-service.md
+    - Core Infrastructure: ec2-examples/core-infra/index.md
+    - Backend Service: ec2-examples/backend-service/index.md
+    - Load Balanced Service: ec2-examples/lb-service/index.md

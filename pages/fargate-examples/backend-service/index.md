@@ -7,7 +7,7 @@ This solution blueprint creates a backend service that **does not** sit behind a
 > [!IMPORTANT]
 > If you have already deployed the infra then you can skip this step.
 
-Deploy the [core-infrastructure](../core-infra/core-infra.md).
+Deploy the [core-infrastructure](../core-infra/index.md).
 
 ## Deploy the Blueprint
 
