@@ -39,6 +39,7 @@ markdown_extensions:
   - admonition
   - codehilite
   - footnotes
+  - nl2br
   - pymdownx.critic
   - pymdownx.details
   - pymdownx.highlight:
