@@ -16,12 +16,13 @@ The core-infra is the Terraform code used to deploy the core infrastructure for 
 
 ## Getting Started
 
-Make sure you have all the [prerequisites](../../README.md) on your machine.
+Make sure you have all the [prerequisites](../../index.md) on your machine.
 
 ## Deploy the Blueprint
 
 1. Clone the forked repository from your account (not the one from the aws-ia organization) and change the directory to the appropriate one as shown below:
-```bash
+
+```shell
 cd ecs-blueprints/terraform/fargate-examples/core-infra/
 ```
 

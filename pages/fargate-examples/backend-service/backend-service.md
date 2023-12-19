@@ -5,9 +5,9 @@ This solution blueprint creates a backend service that **does not** sit behind a
 ## Deploy the Core Infrastructure
 
 > [!IMPORTANT]
-> Note if you have already deployed the infra then you can skip this step.
+> If you have already deployed the infra then you can skip this step.
 
-Deploy the [core-infrastructure](core-infra/core-infra.md).
+Deploy the [core-infrastructure](../core-infra/core-infra.md).
 
 ## Deploy the Blueprint
 
@@ -25,9 +25,15 @@ terraform plan
 terraform apply -auto-approve
 ```
 
+## Test the Solution
+
 To test the backend service access using service discovery, deploy the [load balanced service](lb-service.md) along with providing the name of this backend service.
 
+## Solution Architecture
+
 ![Backend Service Architecture](../../../assets/images/backend-service.png)
+
+## Solution Details
 
 The solution has following key components:
 
