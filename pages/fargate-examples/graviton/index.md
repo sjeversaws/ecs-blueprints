@@ -58,7 +58,7 @@ terraform apply
 
 ## Solution Architecture
 
-![Graviton Service Architecture](../../assets/images/graviton-service.png)
+![Graviton Service Architecture Diagram](../../assets/images/graviton-service.png)
 
 ## Solution Details
 
