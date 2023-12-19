@@ -31,7 +31,7 @@ To test the backend service access using service discovery, deploy the [load bal
 
 ## Solution Architecture
 
-![Backend Service Architecture](../../../assets/images/backend-service.png)
+![Backend Service Architecture](../../../../assets/images/backend-service.png)
 
 ## Solution Details
 

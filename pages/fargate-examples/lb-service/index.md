@@ -27,7 +27,7 @@ terraform apply -auto-approve
 
 ## Solution Architecture
 
-![Load Balanced Service Architecture](../../../assets/images/lb-service.png)
+![Load Balanced Service Architecture](../../../../assets/images/lb-service.png)
 
 ## Solution Details
 

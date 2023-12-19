@@ -43,7 +43,7 @@ In the left panel, find the `+` icon and create a `Dashboard`. In the create das
 
 ## Blueprint Architecture
 
-![Grafana dashboard showing cpu and memory metrics](../../../assets/images/amg-amp-metrics.png)
+![Grafana dashboard showing cpu and memory metrics](../../../../assets/images/amg-amp-metrics.png)
 
 ## Solution Details
 

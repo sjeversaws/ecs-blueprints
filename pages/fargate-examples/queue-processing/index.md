@@ -59,7 +59,7 @@ Check the SQS queue for the notificatiosn from the S3 bucket file upload, check 
 
 ## Blueprint Architecture
 
-![ECS Fargate Queue Processing Architecture Diagram](../../../assets/images/ecs-fargate-queue-processing.png)
+![ECS Fargate Queue Processing Architecture Diagram](../../../../assets/images/ecs-fargate-queue-processing.png)
 
 ## Solution Details
 
