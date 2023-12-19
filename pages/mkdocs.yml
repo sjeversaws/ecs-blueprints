@@ -60,9 +60,9 @@ nav:
   - Introduction: index.md
   - Fargate Examples:
     - Core Infrastructure: fargate-examples/core-infra.md
-    - Backend Service: fargate-examples/backend-service.md
+    - Backend Service: fargate-examples/backend-service/backend-service.md
     - Load Balanced Service: fargate-examples/lb-service.md
-    - Graviton: fargate-examples/graviton.md
+    - Graviton: fargate-examples/graviton/graviton.md
     - Prometheus: fargate-examples/prometheus.md
     - Queue Processing: fargate-examples/queue-processing.md
     - VPC Endpoints: fargate-examples/vpc-endpoints.md

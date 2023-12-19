@@ -28,7 +28,7 @@ terraform apply -auto-approve
 To test the backend service access using service discovery, deploy the [load balanced service](lb-service.md) along with providing the name of this backend service.
 
 <p align="center">
-  <img src="../images/backend-service.png"/>
+  <img src="../../images/backend-service.png"/>
 </p>
 
 The solution has following key components:
