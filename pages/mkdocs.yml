@@ -51,11 +51,9 @@ markdown_extensions:
   - toc:
       permalink: true
 plugins:
-  - include-markdown
   - search:
       lang:
         - en
-  - awesome-pages
 nav:
   - Introduction: index.md
   - Fargate Examples:
@@ -66,3 +64,7 @@ nav:
     - Prometheus: fargate-examples/prometheus.md
     - Queue Processing: fargate-examples/queue-processing.md
     - VPC Endpoints: fargate-examples/vpc-endpoints.md
+  - EC2 Examples:
+    - Core Infrastructure: ec2-examples/core-infra.md
+    - Backend Service: ec2-examples/backend-service.md
+    - Load Balanced Service: ec2-examples/lb-service.md
