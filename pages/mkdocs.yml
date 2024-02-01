@@ -57,7 +57,7 @@ plugins:
       lang:
         - en
 nav:
-  - Introduction: index.md
+  - Overview: index.md
   - Fargate Examples:
     - Core Infrastructure: fargate-examples/core-infra/index.md
     - Backend Service: fargate-examples/backend-service/index.md
